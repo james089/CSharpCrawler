@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <DockPanel>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="24" Margin="5" TextWrapping="Wrap" Text="Search Content" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="Btn_download" Content="Button" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Width="auto"/>
+        </DockPanel>
+
     </Grid>
 </Window>
