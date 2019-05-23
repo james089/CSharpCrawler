@@ -5,12 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpCrawler"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <DockPanel>
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="24" Margin="5" TextWrapping="Wrap" Text="Search Content" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="Btn_download" Content="Button" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Width="auto"/>
-        </DockPanel>
+        Title="Google Image Downloader" Height="455" Width="390.833" WindowStyle="None"
+        WindowStartupLocation="CenterScreen" ResizeMode ="NoResize" Icon="crawler_8D8_icon.ico">
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="TitleBar" Background="{DynamicResource Background_titleBar}" Effect="{DynamicResource SmallShadow}" Panel.ZIndex="50">
+            <DockPanel>
+                <Image Source="crawler_8D8_icon.ico" Margin="5"></Image>
+                <TextBlock x:Name="TB_info" Grid.Column="1" Text="Google Image Downloader" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="16" Height="Auto" FontWeight="Bold" HorizontalAlignment="Left" />
+
+            </DockPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0" Height="auto">
+                <Button x:Name="Btn_minimize" Style="{DynamicResource Button_minimize}" Content="-" Margin="0" FontWeight="Bold" Click="Btn_minimize_Click"/>
+                <Button x:Name="Btn_close" Style="{DynamicResource Button_close}" Content="X" Margin="0" Background="#FFD42525" FontWeight="Bold" Click="Btn_close_Click" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.RowSpan="1" Margin="10">
+                <Label Content="Search Keyword" Width="130"/>
+                <TextBox x:Name="TB_searchContent" HorizontalAlignment="Left" Height="24" Margin="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="Btn_download" Content="Download" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Top" Width="100" Click="Btn_download_Click"/>
+            </DockPanel>
+            <DockPanel Grid.Row="1" Margin="10 5">
+                <Label Content="Num of images" Width="130"/>
+                <TextBox x:Name="TB_numImages" HorizontalAlignment="Left" Height="24" Margin="5" TextWrapping="Wrap" Text="600" VerticalAlignment="Top" Width="120" TextChanged="TB_numPages_TextChanged"/>
+
+            </DockPanel>
+            <Border Grid.Row="2" Margin="5" BorderBrush="Gray" BorderThickness="1">
+                <ScrollViewer x:Name="mScrollViewer" VerticalScrollBarVisibility="Auto" Margin="5">
+                    <ItemsControl x:Name="LB_result">
+
+                    </ItemsControl>
+                </ScrollViewer>
+            </Border>
+        </Grid>
     </Grid>
 </Window>

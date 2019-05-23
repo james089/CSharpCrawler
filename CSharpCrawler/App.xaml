@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:CSharpCrawler"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="/mUserControl_BSC_dll;component/Themes/CloudPoint.xaml"/>
     </Application.Resources>
 </Application>

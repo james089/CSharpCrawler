@@ -8,9 +8,9 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CSharpCrawler")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Download images from google automatically")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Bojun Lin")]
 [assembly: AssemblyProduct("CSharpCrawler")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
