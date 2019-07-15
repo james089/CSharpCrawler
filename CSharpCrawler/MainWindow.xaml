@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpCrawler"
         mc:Ignorable="d"
-        Title="Google Image Downloader" Height="455" Width="390.833" WindowStyle="None"
-        WindowStartupLocation="CenterScreen" ResizeMode ="NoResize" Icon="crawler_8D8_icon.ico">
+        Title="Google Image Downloader" Height="485" Width="450" WindowStyle="None"
+        WindowStartupLocation="CenterScreen" ResizeMode ="NoResize" Icon="crawler_8D8_icon.ico"
+        Background="{x:Null}" AllowsTransparency="True" >
 
-    <Grid>
+    <Grid Height="455" Width="400" Background="{DynamicResource Background_main}" Effect="{DynamicResource BigShadow}">
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="TitleBar" Background="{DynamicResource Background_titleBar}" Effect="{DynamicResource SmallShadow}" Panel.ZIndex="50">
+        <Grid x:Name="TitleBar" Background="{DynamicResource Background_titleBar}" Effect="{DynamicResource SmallShadow}" Panel.ZIndex="50" MouseDown="TitleBar_MouseDown">
             <DockPanel>
                 <Image Source="crawler_8D8_icon.ico" Margin="5"></Image>
                 <TextBlock x:Name="TB_info" Grid.Column="1" Text="Google Image Downloader" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="16" Height="Auto" FontWeight="Bold" HorizontalAlignment="Left" />
